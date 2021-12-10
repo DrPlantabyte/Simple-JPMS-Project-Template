@@ -1,0 +1,1 @@
+--module-path build/jar --module mydomain.mymodule.app/mydomain.mymodule.app.Main

@@ -1,0 +1,1 @@
+--create --file build/jar/mydomain.mymodule-0.0.0.jar --module-version 0.0.0 -C build/compile/mydomain.mymodule .

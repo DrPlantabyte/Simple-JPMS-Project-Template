@@ -5,7 +5,6 @@
 *.log
 
 build/*
-run/*
 .idea/*
 *.iml
 nbproject/*
