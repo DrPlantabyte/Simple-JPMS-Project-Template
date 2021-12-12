@@ -1,4 +1,5 @@
 package mydomain.mymodule.test;
+import java.io.*;
 public class Main{
 	public static void main(String[] args){
 		mydomain.mymodule.Main.main(args);

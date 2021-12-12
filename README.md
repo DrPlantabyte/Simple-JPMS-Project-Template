@@ -81,7 +81,6 @@ jpackage @jpackage-args.txt
 
 ```bash
 rm -rf build/*
-rm -rf run/*
 ```
 
 ## Adding New Modules
@@ -89,6 +88,13 @@ rm -rf run/*
 Run the following terminal commands to create a new module and modify the build files, creating a new `@jar-args_test-module.txt` file for building the module .jar file.
 
 ```bash
-MODULENAME="mydomain.mymodule.test"; mkdir -p sources/$MODULENAME/${MODULENAME//./\/}; mkdir -p resources/$MODULENAME/${MODULENAME//./\/}; echo "module $MODULENAME {exports $MODULENAME;}" > sources/$MODULENAME/module-info.java; echo "package $MODULENAME; public class Main{public static void main(String[] args){System.out.println(Main.class);}}" > sources/$MODULENAME/${MODULENAME//./\/}/Main.java; echo "--create --file build/jar/$MODULENAME-0.0.0.jar --module-version 0.0.0 -C build/compile/$MODULENAME ." > jar-args_$MODULENAME.txt; echo "$MODULENAME," >> module-list.txt
+MODULENAME="mydomain.newmodule"
+mkdir -p sources/$MODULENAME/${MODULENAME//./\/}
+mkdir -p resources/$MODULENAME/${MODULENAME//./\/}
+echo "module $MODULENAME {exports $MODULENAME;}" > sources/$MODULENAME/module-info.java
+echo "package $MODULENAME
+public class Main{public static void main(String[] args){System.out.println(Main.class);}}" > sources/$MODULENAME/${MODULENAME//./\/}/Main.java
+echo "--create --file build/jar/$MODULENAME-0.0.0.jar --module-version 0.0.0 -C build/compile/$MODULENAME ." > jar-args_$MODULENAME.txt
+echo "$MODULENAME," >> module-list.txt
 ```
 
