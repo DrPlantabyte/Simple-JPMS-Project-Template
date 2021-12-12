@@ -1,0 +1,1 @@
+-d build/javadoc --module-source-path sources --module

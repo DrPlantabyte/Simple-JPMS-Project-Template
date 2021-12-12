@@ -1,0 +1,1 @@
+-d build/compile --module-source-path sources --module-path build/compile --module
